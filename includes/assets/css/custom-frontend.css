@@ -1,11 +1,30 @@
-.estimated_wrapper_section {
+.estimated_wrapper_section, 
+.fare_wrapper_section {
     background: linear-gradient(to bottom,rgba(45,0,120,.9),rgb(45,0,100));
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.fare_wrapper_section {
+    background:#d7cde2;
+}
+.fare_wrapper_box {
+    box-shadow: 0 4px 10px #40196426;
+    border: 1px solid #dcdcdc;
+    background: #fff;
+    border-radius: 10px;
+}
+.fare_wrapper_container,
 .estimated_wrapper_section .estimated_wrapper_container {
     max-width: 752px;
     margin: 0 auto;
+    width: 100%;
 }
+.fare_wrapper_container {
+    max-width: 800px;
+}
+.fare_header_tab,
 .estimated_wrapper_section .estimated_header_section {
     background: linear-gradient(to right,#fabf47,#ffd445);
     padding: 15px 20px;
@@ -21,6 +40,28 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 15px 20px;
+}
+.fare_header_tab {
+    background: #ededed;
+    padding: 0;
+    overflow: hidden;
+}
+.fare_header_tab ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.fare_header_tab ul li {
+    list-style-type: none;
+    width: 100%;
+}
+.fare_header_tab ul li a {
+    display: inline-block;
+    padding: 20px;
+    width: 100%;
+}
+.fare_header_tab ul li.active a {
+    background: #fff;
 }
 .estimated_wrapper_section .title_1 {
     font-size: 30px;
@@ -58,6 +99,7 @@
     width: 100%;
 }
 .estimated_wrapper_section input {
+    border-radius: 0 !important;
     border: none !important;
     outline: none !important;
 }
@@ -228,4 +270,21 @@
 }
 .estimated_wrapper_section .estimated_input_radio_wrapper_topgap {
     margin-top: 30px;
+}
+.estimated_wrapper_section .estimated_addresss {
+    width: 70%;
+    border-right: 1px solid #dbdbdb !important;
+}
+.estimated_wrapper_section .estimated_holding {
+    width: 30%;
+}
+.estimated_wrapper_section .person_count {
+    text-align: center;
+}
+.estimated_wrapper_section .estimated_input_count {
+    width: 100px;
+}
+.estimated_wrapper_section .estimated_count_minus,
+.estimated_wrapper_section .estimated_count_add {
+    display: flex;
 }
