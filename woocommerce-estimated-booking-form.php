@@ -34,6 +34,8 @@ add_action( 'wp_enqueue_scripts', 'wc_ws_bf_enqueue_style' );
  */
 function wc_ws_bf_enqueue_scripts() {
     wp_enqueue_script( 'estimated-form-script', plugin_dir_url( __FILE__ ) . 'includes/assets/js/estimated-form-template.js', array( 'jquery' ), '1.0.0', true );
+    wp_enqueue_script( 'tab-ajax-script', plugin_dir_url( __FILE__ ) . 'includes/assets/js/step-tab-ajax-handler.js', array( 'jquery' ), '1.0.0', true );
+    wp_enqueue_script( 'offer-template-ajax-script', plugin_dir_url( __FILE__ ) . 'includes/assets/js/offer-template-ajax-handler.js', array( 'jquery' ), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'wc_ws_bf_enqueue_scripts' );
 
@@ -45,3 +47,4 @@ add_action( 'wp_enqueue_scripts', 'wc_ws_bf_enqueue_scripts' );
  */
 require_once plugin_dir_path( __FILE__ ) . 'includes/frontend/frontend.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/controller/estimated-form-controller.php';
+require_once plugin_dir_path( __FILE__ ) . 'includes/ajax/step-tab-ajax-handler.php';
