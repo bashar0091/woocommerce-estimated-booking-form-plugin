@@ -8,11 +8,13 @@
 
 function estimated_template_shortcode() {
 
-    $result = '';
-    $result .= '
+    // $result = '';
+    // $result .= '?>
+    
         <div class="estimated_wrapper_section">
             <div class="estimated_wrapper_container">
                 <form action="" method="post">
+                    <input type="hidden" id="distance-result" name="distance_result" />
                     <div class="estimated_header_section">
                         <h1 class="title_1">Boek eenvoudig je taxirit</h1>
                     </div>
@@ -27,10 +29,13 @@ function estimated_template_shortcode() {
                                     <div class="estimated_pin_wrapper">
                                         <span class="estimated_pin"></span>
                                     </div>
-                                    <div class="estimated_input_wrapper">
-                                        <span class="estimated_input_icon">van</span>
-                                        <input type="text" name="estimated_by" class="estimated_addresss" placeholder="straatnaam met huisnummer" required>
-                                        <input type="text" name="estimated_by_holding" class="estimated_holding" placeholder="Holding No." required>
+                                    <div class="estimated_location_suggest">
+                                        <div class="estimated_input_wrapper">
+                                            <span class="estimated_input_icon">van</span>
+                                            <input type="text" name="estimated_by" class="estimated_location_map estimated_addresss" placeholder="straatnaam met huisnummer" required>
+                                            <input type="text" name="estimated_by_holding" class="estimated_holding" placeholder="Holding No." required>
+                                        </div>
+                                        <div class="estimated_location_dropdown"></div>
                                     </div>
                                 </div>
                             </div>
@@ -63,10 +68,13 @@ function estimated_template_shortcode() {
                                         </svg>
                                     </span>
                                 </div>
-                                <div class="estimated_input_wrapper">
-                                    <span class="estimated_input_icon">naar</span>
-                                    <input type="text" name="estimated_reach" class="estimated_addresss" placeholder="straatnaam met huisnummer" required>
-                                    <input type="text" name="estimated_reach_holding" class="estimated_holding" placeholder="Holding No." required>
+                                <div class="estimated_location_suggest">
+                                    <div class="estimated_input_wrapper">
+                                        <span class="estimated_input_icon">naar</span>
+                                        <input type="text" name="estimated_reach" class="estimated_location_map estimated_addresss estimated_addresss_last" placeholder="straatnaam met huisnummer" required>
+                                        <input type="text" name="estimated_reach_holding" class="estimated_holding" placeholder="Holding No." required>
+                                    </div>
+                                    <div class="estimated_location_dropdown"></div>
                                 </div>
                             </div>
 
@@ -102,7 +110,7 @@ function estimated_template_shortcode() {
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 11.161 2 10.4153 2.0129 9.75H21.9871C22 10.4153 22 11.161 22 12V14C22 17.7712 22 19.6569 20.8284 20.8284C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.8284C2 19.6569 2 17.7712 2 14V12ZM17 14C17.5523 14 18 13.5523 18 13C18 12.4477 17.5523 12 17 12C16.4477 12 16 12.4477 16 13C16 13.5523 16.4477 14 17 14ZM17 18C17.5523 18 18 17.5523 18 17C18 16.4477 17.5523 16 17 16C16.4477 16 16 16.4477 16 17C16 17.5523 16.4477 18 17 18ZM13 13C13 13.5523 12.5523 14 12 14C11.4477 14 11 13.5523 11 13C11 12.4477 11.4477 12 12 12C12.5523 12 13 12.4477 13 13ZM13 17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17C11 16.4477 11.4477 16 12 16C12.5523 16 13 16.4477 13 17ZM7 14C7.55228 14 8 13.5523 8 13C8 12.4477 7.55228 12 7 12C6.44772 12 6 12.4477 6 13C6 13.5523 6.44772 14 7 14ZM7 18C7.55228 18 8 17.5523 8 17C8 16.4477 7.55228 16 7 16C6.44772 16 6 16.4477 6 17C6 17.5523 6.44772 18 7 18Z" fill="#5a238d"/>
                                         </svg>
                                     </span>
-                                    <input type="text" name="estimated_current_date" placeholder="Selecteer datum en tijd" required>
+                                    <input type="text" class="estimated_calendar" name="estimated_current_date" placeholder="Selecteer datum en tijd" required>
                                 </div>
                             </div>
 
@@ -128,7 +136,7 @@ function estimated_template_shortcode() {
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 11.161 2 10.4153 2.0129 9.75H21.9871C22 10.4153 22 11.161 22 12V14C22 17.7712 22 19.6569 20.8284 20.8284C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.8284C2 19.6569 2 17.7712 2 14V12ZM17 14C17.5523 14 18 13.5523 18 13C18 12.4477 17.5523 12 17 12C16.4477 12 16 12.4477 16 13C16 13.5523 16.4477 14 17 14ZM17 18C17.5523 18 18 17.5523 18 17C18 16.4477 17.5523 16 17 16C16.4477 16 16 16.4477 16 17C16 17.5523 16.4477 18 17 18ZM13 13C13 13.5523 12.5523 14 12 14C11.4477 14 11 13.5523 11 13C11 12.4477 11.4477 12 12 12C12.5523 12 13 12.4477 13 13ZM13 17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17C11 16.4477 11.4477 16 12 16C12.5523 16 13 16.4477 13 17ZM7 14C7.55228 14 8 13.5523 8 13C8 12.4477 7.55228 12 7 12C6.44772 12 6 12.4477 6 13C6 13.5523 6.44772 14 7 14ZM7 18C7.55228 18 8 17.5523 8 17C8 16.4477 7.55228 16 7 16C6.44772 16 6 16.4477 6 17C6 17.5523 6.44772 18 7 18Z" fill="#5a238d"/>
                                         </svg>
                                     </span>
-                                    <input type="text" name="estimated_return_date" placeholder="Enkele reis">
+                                    <input type="text" class="estimated_calendar" name="estimated_return_date" placeholder="Enkele reis">
                                 </div>
                             </div>
 
@@ -158,8 +166,8 @@ function estimated_template_shortcode() {
                 </form>
             </div>
         </div>
-    ';
+    <!-- ';
 
-    return $result;
+    return $result; --><?php
 }
 add_shortcode( 'estimated-form', 'estimated_template_shortcode' );

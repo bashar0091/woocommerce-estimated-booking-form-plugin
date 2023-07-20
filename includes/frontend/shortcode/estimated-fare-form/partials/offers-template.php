@@ -1,6 +1,7 @@
 <?php
 
 $estimated_ride_person = $_SESSION['estimated_ride_person'];
+$distance_result = $_SESSION['distance_result'];
 
 $result .= '
 <div id="offers" class="step-tab show">
@@ -28,186 +29,77 @@ $result .= '
         </div>
     </div>
 
-    <div class="car_list_fare_section">
-        <div class="car_list_fare_item active">
-            <div class="car_fare_image">
-                <img src="https://sneleentaxi.nl/assets/icons/offers/standard.png" alt="car-image">
-            </div>
-            <div class="car_fare_instruct">
-                <h3>Standaard retour</h3>
-                <ul>
-                    <li>
-                        <span>
-                            <svg width="20px" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g id="Interface / Check">
-                            <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#24cd85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </g>
-                            </svg>
-                        </span>
-                        <span>
-                            Altijd een privé-taxi
-                        </span>
-                    </li>
-                    <li>
-                        <svg width="20px" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="Interface / Check">
-                        <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#24cd85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </g>
-                        </svg>
-                        Bagage gratis mee
-                    </li>
-                    <li>
-                        <svg width="20px" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="Interface / Check">
-                        <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#24cd85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </g>
-                        </svg>
-                        Gecertificeerde taxibedrijven
-                    </li>
-                </ul>
-            </div>
-            <div class="car_fare_price_confirm">
-                <h5>€ 404,54</h5>
-                <h4>€ 323,63</h4>
-                <button class="fare_button_submit">Selecteer</button>
-            </div>
-        </div>
-
-        <div class="car_list_fare_item">
-            <div class="car_fare_image">
-                <img src="https://sneleentaxi.nl/assets/icons/offers/standard.png" alt="car-image">
-            </div>
-            <div class="car_fare_instruct">
-                <h3>Standaard retour</h3>
-                <ul>
-                    <li>
-                        <span>
-                            <svg width="20px" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g id="Interface / Check">
-                            <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#24cd85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </g>
-                            </svg>
-                        </span>
-                        <span>
-                            Altijd een privé-taxi
-                        </span>
-                    </li>
-                    <li>
-                        <svg width="20px" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="Interface / Check">
-                        <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#24cd85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </g>
-                        </svg>
-                        Bagage gratis mee
-                    </li>
-                    <li>
-                        <svg width="20px" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="Interface / Check">
-                        <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#24cd85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </g>
-                        </svg>
-                        Gecertificeerde taxibedrijven
-                    </li>
-                </ul>
-            </div>
-            <div class="car_fare_price_confirm">
-                <h5>€ 404,54</h5>
-                <h4>€ 323,63</h4>
-                <button class="fare_button_submit">Selecteer</button>
-            </div>
-        </div>
-
-
-        <div class="car_list_fare_item">
-            <div class="car_fare_image">
-                <img src="https://sneleentaxi.nl/assets/icons/offers/standard.png" alt="car-image">
-            </div>
-            <div class="car_fare_instruct">
-                <h3>Standaard retour</h3>
-                <ul>
-                    <li>
-                        <span>
-                            <svg width="20px" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g id="Interface / Check">
-                            <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#24cd85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </g>
-                            </svg>
-                        </span>
-                        <span>
-                            Altijd een privé-taxi
-                        </span>
-                    </li>
-                    <li>
-                        <svg width="20px" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="Interface / Check">
-                        <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#24cd85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </g>
-                        </svg>
-                        Bagage gratis mee
-                    </li>
-                    <li>
-                        <svg width="20px" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="Interface / Check">
-                        <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#24cd85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </g>
-                        </svg>
-                        Gecertificeerde taxibedrijven
-                    </li>
-                </ul>
-            </div>
-            <div class="car_fare_price_confirm">
-                <h5>€ 404,54</h5>
-                <h4>€ 323,63</h4>
-                <button class="fare_button_submit">Selecteer</button>
-            </div>
-        </div>
-
-        <div class="car_list_fare_item">
-            <div class="car_fare_image">
-                <img src="https://sneleentaxi.nl/assets/icons/offers/standard.png" alt="car-image">
-            </div>
-            <div class="car_fare_instruct">
-                <h3>Standaard retour</h3>
-                <ul>
-                    <li>
-                        <span>
-                            <svg width="20px" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g id="Interface / Check">
-                            <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#24cd85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </g>
-                            </svg>
-                        </span>
-                        <span>
-                            Altijd een privé-taxi
-                        </span>
-                    </li>
-                    <li>
-                        <svg width="20px" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="Interface / Check">
-                        <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#24cd85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </g>
-                        </svg>
-                        Bagage gratis mee
-                    </li>
-                    <li>
-                        <svg width="20px" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="Interface / Check">
-                        <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#24cd85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </g>
-                        </svg>
-                        Gecertificeerde taxibedrijven
-                    </li>
-                </ul>
-            </div>
-            <div class="car_fare_price_confirm">
-                <h5>€ 404,54</h5>
-                <h4>€ 323,63</h4>
-                <button class="fare_button_submit">Selecteer</button>
-            </div>
-        </div>
-
+    <div class="car_list_fare_section">';
+        $args = array(
+            'post_type'      => 'product',
+            'post_status'    => 'publish',
+            'posts_per_page' => 4,
+            'order'          => 'ASC'
+        );
         
-    </div>
+        $products_query = new WP_Query( $args );
+        
+        if ( $products_query->have_posts() ) {
+            while ( $products_query->have_posts() ) {
+                $products_query->the_post();
+                global $product;
+
+                $regular_price = (float) $product->get_regular_price();
+                $sale_price = (float) $product->get_price();
+
+                $main_price = $distance_result * $regular_price;
+                $sale_price = $distance_result * $sale_price;
+
+                $main_price_formatted = wc_price($main_price);
+                $sale_price_formatted = wc_price($sale_price);
+                
+                $result .= '<div class="car_list_fare_item">
+                    <div class="car_fare_image">
+                        <img src="'.get_the_post_thumbnail_url().'" alt="car-image">
+                    </div>
+                    <div class="car_fare_instruct">
+                        <h3>'.get_the_title().'</h3>
+                        <ul>
+                            <li>
+                                <span>
+                                    <svg width="20px" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="Interface / Check">
+                                    <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#24cd85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                    </svg>
+                                </span>
+                                <span>
+                                    Altijd een privé-taxi
+                                </span>
+                            </li>
+                            <li>
+                                <svg width="20px" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="Interface / Check">
+                                <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#24cd85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                                </svg>
+                                Bagage gratis mee
+                            </li>
+                            <li>
+                                <svg width="20px" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="Interface / Check">
+                                <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#24cd85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                                </svg>
+                                Gecertificeerde taxibedrijven
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="car_fare_price_confirm">
+                        <h5>'.$main_price_formatted.'</h5>
+                        <h4>'.$sale_price_formatted.'</h4>
+                        <button class="fare_button_submit">Selecteer</button>
+                    </div>
+                </div>';
+            }
+        }
+        wp_reset_postdata();
+    $result .= '</div>
 
     <div class="fare_body_footer_section">
         <div>

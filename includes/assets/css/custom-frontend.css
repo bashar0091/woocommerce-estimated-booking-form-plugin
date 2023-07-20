@@ -490,3 +490,36 @@
         width: 100%;
     }
 }
+.estimated_location_suggest {
+    position: relative;
+}
+.estimated_location_dropdown {
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    z-index: 99;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    display: none;
+}
+.estimated_location_dropdown ul {
+    padding-left: 0;
+}
+.estimated_location_dropdown ul li {
+    list-style: none;
+    padding: 12px 15px;
+    border-bottom: 1px solid #e6e6e6;
+    cursor: pointer;
+}
+.estimated_location_dropdown ul li:hover {
+    background: #24CD85;
+    color: #fff;
+}
+.estimated_input_wrapper.active {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 1px solid #ffcf4c;
+}
+.estimated_input_wrapper.active + .estimated_location_dropdown {
+    display: block;
+}

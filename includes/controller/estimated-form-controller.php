@@ -31,6 +31,8 @@ function process_estimated_booking() {
         
         $_SESSION['estimated_ride_person'] = $_POST['estimated_ride_person'];   
 
+        $_SESSION['distance_result'] = $_POST['distance_result'];   
+
         wp_redirect('/easytaxi/fare-form');
         exit();
     }
