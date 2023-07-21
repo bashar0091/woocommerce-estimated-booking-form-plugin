@@ -22,6 +22,7 @@
     max-width: 752px;
     margin: 0 auto;
     width: 100%;
+    position: relative;
 }
 .fare_wrapper_container {
     max-width: 800px;
@@ -130,6 +131,9 @@
 }
 .fare_button_submit {
     padding: 0 20px;
+}
+.fare_button_submit {
+    color: #fff !important;
 }
 .fare_button_submit:hover,
 .estimated_wrapper_section .estimated_button_submit:hover {
@@ -418,7 +422,7 @@
 }
 .back_arrow {
     display: flex;
-    color: #5A238D;
+    color: #5A238D !important;
     align-items: center;
     gap: 5px;
 }
@@ -439,9 +443,10 @@
     display: block !important;
 }
 .progress-bar {
-    position: absolute;
+    position: fixed;
     width: 100%;
     display: none;
+    z-index: 999;
 }
 .progress-bar span {
     display: block;
@@ -522,4 +527,89 @@
 }
 .estimated_input_wrapper.active + .estimated_location_dropdown {
     display: block;
+}
+.fare_button_icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.luggage_list_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.luggage_list_item {
+    box-shadow: 0 1px 3px #00000026, 0 1px 2px #00000026;
+    background: #fdfdfd;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.luggage_list_title h5 {
+    margin-bottom: 0;
+    color: #6728A1;
+    font-size: 16px;
+    font-weight: 700;
+}
+.luggage_list_title span {
+    color: #7D7C7C;
+    font-size: 13px;
+    font-weight: 400;
+}
+.luggage_list_number {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+.luggage_count_minus,
+.luggage_count_plus {
+    border: 1px solid #5a238d;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+}
+.luggage_count {
+    flex: 1;
+    text-align: right;
+    padding: 0 !important;
+    font-size: 20px !important;
+}
+.extra_carry_list_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 50px;
+}
+.extra_carry_list_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.extra_carry_list_item .luggage_list_number {
+    margin: inherit;
+    padding: 0;
+}
+.extra_carry_list_item .luggage_list_icon svg {
+    height: 15px;   
+}
+.extra_carry_list_item .luggage_list_number svg {
+    height: 10px;
+}
+.extra_carry_list_item .luggage_count_minus, .extra_carry_list_item .luggage_count_plus {
+    height: 20px;
+    width: 20px;
+}
+.extra_carry_list_item .luggage_list_title h5 {
+    font-size: 14px;
+    font-weight: 500;
+}
+.extra_carry_list_item .luggage_list_number {
+    width: 80px;
+}
+.extra_carry_list_item .luggage_count {
+    font-size: 18px !important;
 }

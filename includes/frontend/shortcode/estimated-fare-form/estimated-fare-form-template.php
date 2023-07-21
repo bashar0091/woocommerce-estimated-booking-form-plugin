@@ -23,7 +23,6 @@ session_start();
             <div class="fare_wrapper_box">
                 <div class="estimated_header_section">
                     <div class="fare_header_tab">';
-
     ob_start();
     require_once('partials/tab-item.php');
     $result .= ob_get_clean();
@@ -32,6 +31,9 @@ session_start();
                     </div>
                 </div>
                 <div class="fare_body_section">';
+    ob_start();
+    require_once('partials/luggage-popup.php');
+    $result .= ob_get_clean();
 
     ob_start();
     require_once('partials/offers-template.php');

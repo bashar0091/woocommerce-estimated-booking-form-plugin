@@ -4,8 +4,8 @@
  * Plugin URI: 
  * Description: Estimated Booking Form
  * Version: 1.0.0
- * Author: Awal Bashar
- * Author URI: https://bashar0091.github.io/awalbasharofficial
+ * Author: Dev Bucks
+ * Author URI: 
  * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain: wc-es-booking-form
@@ -14,7 +14,6 @@
 
 // Prevent direct access to the plugin file
 defined( 'ABSPATH' ) || exit;
-
 
 /**
  * 
@@ -38,6 +37,7 @@ function wc_ws_bf_enqueue_scripts() {
     wp_enqueue_script( 'tab-ajax-script', plugin_dir_url( __FILE__ ) . 'includes/assets/js/step-tab-ajax-handler.js', array( 'jquery' ), '1.0.0', true );
     wp_enqueue_script( 'offer-template-ajax-script', plugin_dir_url( __FILE__ ) . 'includes/assets/js/offer-template-ajax-handler.js', array( 'jquery' ), '1.0.0', true );
     wp_enqueue_script( 'offer-template-ajax-script', plugin_dir_url( __FILE__ ) . 'includes/assets/js/offer-template-ajax-handler.js', array( 'jquery' ), '1.0.0', true );
+    wp_enqueue_script( 'luggage-handler-script', plugin_dir_url( __FILE__ ) . 'includes/assets/js/luggage-handler.js', array( 'jquery' ), '1.0.0', true );
 
     wp_enqueue_script( 'mapbox-gl-script', 'https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js', array( 'jquery' ), '1.0.0', true );
 
@@ -48,6 +48,7 @@ function wc_ws_bf_enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'wc_ws_bf_enqueue_scripts' );
 
 
+
 /**
  * 
  * Require All Includes Files Here
@@ -55,4 +56,3 @@ add_action( 'wp_enqueue_scripts', 'wc_ws_bf_enqueue_scripts' );
  */
 require_once plugin_dir_path( __FILE__ ) . 'includes/frontend/frontend.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/controller/estimated-form-controller.php';
-require_once plugin_dir_path( __FILE__ ) . 'includes/ajax/step-tab-ajax-handler.php';
