@@ -56,3 +56,4 @@ add_action( 'wp_enqueue_scripts', 'wc_ws_bf_enqueue_scripts' );
  */
 require_once plugin_dir_path( __FILE__ ) . 'includes/frontend/frontend.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/controller/estimated-form-controller.php';
+require_once plugin_dir_path( __FILE__ ) . 'includes/controller/estimated-contact-controller.php';

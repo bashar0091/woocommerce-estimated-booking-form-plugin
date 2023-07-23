@@ -39,6 +39,14 @@ session_start();
     require_once('partials/offers-template.php');
     $result .= ob_get_clean();
 
+    ob_start();
+    require_once('partials/travel-data-template.php');
+    $result .= ob_get_clean();
+
+    ob_start();
+    require_once('partials/estimated-contact.php');
+    $result .= ob_get_clean();
+
     $result .= '
                 </div>
             </div>

@@ -2,7 +2,6 @@
 
 $estimated_ride_person = $_SESSION['estimated_ride_person'];
 $distance_result = $_SESSION['distance_result'];
-
 $result .= '
 <form method="post" action="">
     <div id="offers" class="step-tab show">
@@ -58,53 +57,57 @@ $result .= '
 
                     $main_price = $distance_result * $regular_price;
                     $sale_price = $distance_result * $sale_price;
-
-                    $main_price_formatted = wc_price($main_price);
-                    $sale_price_formatted = wc_price($sale_price);
                     
-                    $result .= '<div class="car_list_fare_item ' . ($i == 1 ? "active" : '') . ' ">
-                        <div class="car_fare_image">
-                            <img src="'.get_the_post_thumbnail_url().'" alt="car-image">
-                        </div>
-                        <div class="car_fare_instruct">
-                            <h3>'.get_the_title().'</h3>
-                            <ul>
-                                <li>
-                                    <span>
+                    $product_id = $product->get_id();
+
+                    $result .= '
+                    <label>
+                        <div class="car_list_fare_item ' . ($i == 1 ? "active" : '') . ' ">    
+                            <input type="radio" value="'.$product_id.'" class="car_id" ' . ($i == 1 ? "checked" : '') . '/>
+                            <input type="hidden" value="' . $sale_price . '" class="car_price">
+                            <div class="car_fare_image">
+                                <img src="'.get_the_post_thumbnail_url().'" alt="car-image">
+                            </div>
+                            <div class="car_fare_instruct">
+                                <h3>'.get_the_title().'</h3>
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <svg width="20px" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g id="Interface / Check">
+                                            <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#24cd85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                            </svg>
+                                        </span>
+                                        <span>
+                                            Altijd een privé-taxi
+                                        </span>
+                                    </li>
+                                    <li>
                                         <svg width="20px" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g id="Interface / Check">
                                         <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#24cd85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                                         </g>
                                         </svg>
-                                    </span>
-                                    <span>
-                                        Altijd een privé-taxi
-                                    </span>
-                                </li>
-                                <li>
-                                    <svg width="20px" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g id="Interface / Check">
-                                    <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#24cd85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </g>
-                                    </svg>
-                                    Bagage gratis mee
-                                </li>
-                                <li>
-                                    <svg width="20px" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g id="Interface / Check">
-                                    <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#24cd85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </g>
-                                    </svg>
-                                    Gecertificeerde taxibedrijven
-                                </li>
-                            </ul>
+                                        Bagage gratis mee
+                                    </li>
+                                    <li>
+                                        <svg width="20px" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="Interface / Check">
+                                        <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#24cd85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                        </svg>
+                                        Gecertificeerde taxibedrijven
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="car_fare_price_confirm">
+                                <h5>€ '.$main_price.'</h5>
+                                <h4>€ '.$sale_price.'</h4>
+                                <button class="fare_button_submit">Selecteer</button>
+                            </div>
                         </div>
-                        <div class="car_fare_price_confirm">
-                            <h5>'.$main_price_formatted.'</h5>
-                            <h4>'.$sale_price_formatted.'</h4>
-                            <button class="fare_button_submit">Selecteer</button>
-                        </div>
-                    </div>';
+                    </label>';
                 }
             }
             wp_reset_postdata();
@@ -126,30 +129,5 @@ $result .= '
 </form>
 ';
 
-?>
-<!-- 
-<script>
-    jQuery(document).ready(function($) {
-    $('.offer_button_submit').click(function(e) {
-        e.preventDefault();
-        
-        $.ajax({
-            type: 'POST',
-            url: '<?php echo esc_url(admin_url("admin-ajax.php")); ?>',
-            data: {
-                action: 'offers_template_action',
-            },
-            beforeSend: function() {
-                
-            },
-            success: function(response) {
-                console.log(response);
-            },
-            error: function(xhr, status, error) {
-                console.error('AJAX request failed:', status, error);
-            }
-        });
-        
-    });
-});
-</script> -->
+// ajax requester 
+require_once(dirname(dirname(dirname(dirname(plugin_dir_path( __FILE__ ))))) . '/frontend/ajax/request/offers-template-ajax-request.php');
