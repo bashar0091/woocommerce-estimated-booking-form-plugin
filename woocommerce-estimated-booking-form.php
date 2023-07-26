@@ -57,3 +57,55 @@ add_action( 'wp_enqueue_scripts', 'wc_ws_bf_enqueue_scripts' );
 require_once plugin_dir_path( __FILE__ ) . 'includes/frontend/frontend.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/controller/estimated-form-controller.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/controller/estimated-contact-controller.php';
+
+
+
+
+// all session list for handle 
+echo '
+<div style="background: sky-blue; padding: 15px;">
+    <table cellspacing="0" border="1">
+        <tr>
+            <th>First Location</th>
+            <td>'.$_SESSION['estimated_by'].'</td>
+
+            <th>First Location Holding</th>
+            <td>'.$_SESSION['estimated_by_holding'].'</td>
+
+            <th>Second Location</th>
+            <td>'.$_SESSION['estimated_reach'].'</td>
+
+            <th>Second Location Holding</th>
+            <td>'.$_SESSION['estimated_reach_holding'].'</td>
+        </tr>
+
+        <tr>
+            <th>Total Distance</th>
+            <td>'.$_SESSION['distance_result'].'</td>
+
+            <th>Tour Date</th>
+            <td>'.$_SESSION['estimated_current_date'].'</td>
+
+            <th>Return Yes / Not</th>
+            <td>'. $_SESSION['estimated_return_confirm'].'</td>
+
+            <th>Return Date</th>
+            <td>'.$_SESSION['estimated_return_date'].'</td>
+        </tr>
+
+        <tr>
+            <th>Big Luggage</th>
+            <td>'.$_SESSION['big_luggage'].'</td>
+
+            <th>Small Luggage</th>
+            <td>'.$_SESSION['small_luggage'].'</td>
+
+            <th>Total Person</th>
+            <td>'.$_SESSION['estimated_ride_person'].'</td>
+
+            <th>Return Date</th>
+            <td>'.$_SESSION['estimated_return_date'].'</td>
+        </tr>
+    </table>
+</div>
+';

@@ -10,3 +10,4 @@ require_once plugin_dir_path( __FILE__ ) . 'shortcode/estimated-fare-form/estima
 
 // ajax handler 
 require_once('ajax/handler/offers-template-ajax-hanlder.php');
+require_once('ajax/handler/luggage-template-ajax-handler.php');

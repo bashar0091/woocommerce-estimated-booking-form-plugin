@@ -1,3 +1,9 @@
+<?php 
+$large_luggage_count = isset($_SESSION['large_luggage_count']) ? $_SESSION['large_luggage_count'] : 0;
+$small_luggage_count = isset($_SESSION['small_luggage_count']) ? $_SESSION['small_luggage_count'] : 0;
+$hand_luggage_count = isset($_SESSION['hand_luggage_count']) ? $_SESSION['hand_luggage_count'] : 0;
+
+$result .= '
 <div id="luggage" class="step-tab">
     <div class="fare_body_top_section">
         <div>
@@ -27,7 +33,7 @@
                     <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </a>
-                <input type="number" class="luggage_count" disabled name="luggage_count" value="0" class="person_count" min="0" max="8">
+                <input type="number" class="luggage_count large_luggage_count" disabled name="large_luggage_count" value="'.$large_luggage_count.'" min="0" max="8">
                 <a href="#!" class="luggage_count_plus">
                     <svg fill="#000000" height="15px" width="100%" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 455 455" xml:space="preserve">
                     <polygon points="455,212.5 242.5,212.5 242.5,0 212.5,0 212.5,212.5 0,212.5 0,242.5 212.5,242.5 212.5,455 242.5,455 242.5,242.5 
@@ -52,7 +58,7 @@
                     <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </a>
-                <input type="number" class="luggage_count" disabled name="luggage_count" value="0" class="person_count" min="0" max="8">
+                <input type="number" class="luggage_count small_luggage_count" disabled name="small_luggage_count" value="'.$small_luggage_count.'" min="0" max="8">
                 <a href="#!" class="luggage_count_plus">
                     <svg fill="#000000" height="15px" width="100%" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 455 455" xml:space="preserve">
                     <polygon points="455,212.5 242.5,212.5 242.5,0 212.5,0 212.5,212.5 0,212.5 0,242.5 212.5,242.5 212.5,455 242.5,455 242.5,242.5 
@@ -77,7 +83,7 @@
                     <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </a>
-                <input type="number" class="luggage_count" disabled name="luggage_count" value="0" class="person_count" min="0" max="8">
+                <input type="number" class="luggage_count hand_luggage_count" disabled name="hand_luggage_count" value="'.$hand_luggage_count.'" min="0" max="8">
                 <a href="#!" class="luggage_count_plus">
                     <svg fill="#000000" height="15px" width="100%" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 455 455" xml:space="preserve">
                     <polygon points="455,212.5 242.5,212.5 242.5,0 212.5,0 212.5,212.5 0,212.5 0,242.5 212.5,242.5 212.5,455 242.5,455 242.5,242.5 
@@ -103,7 +109,7 @@
                     <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </a>
-                <input type="number" class="luggage_count" disabled name="luggage_count" value="0" class="person_count" min="0" max="8">
+                <input type="number" class="luggage_count" disabled name="luggage_count" value="0" min="0" max="8">
                 <a href="#!" class="luggage_count_plus">
                     <svg fill="#000000" height="15px" width="100%" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 455 455" xml:space="preserve">
                     <polygon points="455,212.5 242.5,212.5 242.5,0 212.5,0 212.5,212.5 0,212.5 0,242.5 212.5,242.5 212.5,455 242.5,455 242.5,242.5 
@@ -127,7 +133,7 @@
                     <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </a>
-                <input type="number" class="luggage_count" disabled name="luggage_count" value="0" class="person_count" min="0" max="8">
+                <input type="number" class="luggage_count" disabled name="luggage_count" value="0" min="0" max="8">
                 <a href="#!" class="luggage_count_plus">
                     <svg fill="#000000" height="15px" width="100%" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 455 455" xml:space="preserve">
                     <polygon points="455,212.5 242.5,212.5 242.5,0 212.5,0 212.5,212.5 0,212.5 0,242.5 212.5,242.5 212.5,455 242.5,455 242.5,242.5 
@@ -151,7 +157,7 @@
                     <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </a>
-                <input type="number" class="luggage_count" disabled name="luggage_count" value="0" class="person_count" min="0" max="8">
+                <input type="number" class="luggage_count" disabled name="luggage_count" value="0" min="0" max="8">
                 <a href="#!" class="luggage_count_plus">
                     <svg fill="#000000" height="15px" width="100%" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 455 455" xml:space="preserve">
                     <polygon points="455,212.5 242.5,212.5 242.5,0 212.5,0 212.5,212.5 0,212.5 0,242.5 212.5,242.5 212.5,455 242.5,455 242.5,242.5 
@@ -175,7 +181,7 @@
                     <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </a>
-                <input type="number" class="luggage_count" disabled name="luggage_count" value="0" class="person_count" min="0" max="8">
+                <input type="number" class="luggage_count" disabled name="luggage_count" value="0" min="0" max="8">
                 <a href="#!" class="luggage_count_plus">
                     <svg fill="#000000" height="15px" width="100%" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 455 455" xml:space="preserve">
                     <polygon points="455,212.5 242.5,212.5 242.5,0 212.5,0 212.5,212.5 0,212.5 0,242.5 212.5,242.5 212.5,455 242.5,455 242.5,242.5 
@@ -199,8 +205,7 @@
         </div>
     </div>
 </div>
+';
 
-<?php
 // ajax requester 
 require_once(dirname(dirname(dirname(dirname(plugin_dir_path( __FILE__ ))))) . '/frontend/ajax/request/luggage-template-ajax-request.php');
-?>

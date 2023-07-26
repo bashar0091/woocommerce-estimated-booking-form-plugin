@@ -17,10 +17,10 @@
                 
                 $('.progress-bar').removeClass('active');
                 $('.estimated_info').removeClass('active');
-                $('.estimated_contact').addClass('active');
+                $('.estimated_contact').addClass('allow active');
 
                 $('#travel_data').removeClass('show');
-                $('#contact_details').addClass('show allow');
+                $('#contact_details').addClass('show');
             },
             error: function(xhr, status, error) {
                 console.error('AJAX request failed:', status, error);

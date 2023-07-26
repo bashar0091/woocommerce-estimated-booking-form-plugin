@@ -21,7 +21,8 @@ function process_estimated_booking() {
         $_SESSION['estimated_reach'] = $_POST['estimated_reach'];
         $_SESSION['estimated_reach_holding'] = $_POST['estimated_reach_holding'];
 
-        $_SESSION['luggage_condition'] = $_POST['luggage_condition'];
+        $_SESSION['big_luggage'] = $_POST['big_luggage'];
+        $_SESSION['small_luggage'] = $_POST['small_luggage'];
 
         $_SESSION['estimated_current_date'] = $_POST['estimated_current_date'];
 

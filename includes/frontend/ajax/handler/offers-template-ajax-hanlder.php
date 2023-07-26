@@ -7,10 +7,14 @@ function offers_template_handler(){
     $_SESSION['car_id'] = $_POST['car_id_post'];
     $_SESSION['car_price'] = $_POST['car_price_post'];
     $_SESSION['car_name'] = $_POST['car_name_post'];
+    $_SESSION['estimated_ride_person'] = $_POST['person_count_get'];
     
     echo json_encode(
         array(
+            'car_id' => $_SESSION['car_id'],
             'car_price' => $_SESSION['car_price'],
+            'car_name' => $_SESSION['car_name'],
+            'estimated_ride_person' => $_SESSION['estimated_ride_person'],
         ),
     );
 

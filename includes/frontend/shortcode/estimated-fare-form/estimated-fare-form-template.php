@@ -32,10 +32,6 @@ session_start();
                 </div>
                 <div class="fare_body_section">';
     ob_start();
-    require_once('partials/luggage-popup.php');
-    $result .= ob_get_clean();
-
-    ob_start();
     require_once('partials/offers-template.php');
     $result .= ob_get_clean();
 
