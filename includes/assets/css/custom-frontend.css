@@ -6,7 +6,6 @@
 }
 
 .fare_wrapper_section {
-    background:#d7cde2;
     height: auto;
     padding: 20px 0;
 }
@@ -469,6 +468,7 @@
     width: 100%;
     display: none;
     z-index: 999;
+    top: 0;
 }
 .progress-bar span {
     display: block;
