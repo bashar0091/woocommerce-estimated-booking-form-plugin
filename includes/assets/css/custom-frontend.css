@@ -162,7 +162,7 @@
     width: 11px;
     height: 11px;
     display: inline-block;
-    border: 2px solid var(--black);
+    border: 2px solid var(--white);
     border-radius: 100px;
     position: relative;
 }
@@ -171,7 +171,7 @@
     position: absolute;
     top: 100%;
     left: 50%;
-    background: var(--black);
+    background: var(--white);
     min-height: calc(100% + 25px);
     width: 4px;
     transform: translateX(-50%);
@@ -210,7 +210,7 @@
 }
 .estimated_plus svg {
     height: 8px;
-    fill: var(--black);
+    fill: var(--white);
 }
 .estimated_pin_color svg {
     fill:var(--main_color);
@@ -237,7 +237,7 @@
     margin-left: -3px;
 }
 .estimated_location svg path {
-    fill: var(--black);
+    fill: var(--white);
 }
 .estimated_location_color svg path {
     fill: var(--main_color);
@@ -882,12 +882,7 @@
 .woocommerce-additional-fields {
 	display: none !important;
 }
-.woocommerce-MyAccount-navigation ul li:hover a, .woocommerce-MyAccount-navigation ul li.is-active a {
-	background: #F7702B;
-}
-.button, .ct-button, .entry-tags a, .added_to_cart, [type="submit"], .wp-element-button, .wp-block-button__link, a.showlogin, a.restore-item, button.regform-button, button[class*="ajax"], .submit:where(:not(div.submit)), .forminator-ui[data-design="none"] .forminator-button {
-	position: relative;
-	color: var(--buttonTextInitialColor);
-	border: var(--button-border);
+.woocommerce-MyAccount-navigation-link--orders.is-active,
+.woocommerce-button {
 	background-color: #F7702B !important;
 }

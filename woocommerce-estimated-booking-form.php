@@ -65,12 +65,63 @@ require_once plugin_dir_path( __FILE__ ) . 'includes/controller/estimated-contac
  */
 add_filter('woocommerce_add_cart_item_data', 'restrict_single_product_to_cart', 10, 3);
 function restrict_single_product_to_cart($cart_item_data, $product_id, $variation_id) {
-    // Empty the cart before adding a new product
     WC()->cart->empty_cart();
 
-    // Return the cart item data unchanged
     return $cart_item_data;
 }
+
+
+/**
+ * 
+ * Show cancel in woocommmerce 
+ * 
+ */
+function add_cancel_order_button_to_my_orders_actions($actions, $order) {
+    if ($order->has_status('processing')) {
+        $order_id = $order->get_id();
+        $redirect_url = wc_get_account_endpoint_url('dashboard');
+        $cancel_url = add_query_arg(
+            array(
+                'cancel_order' => 'true',
+                'order_id' => $order_id,
+                'redirect' => urlencode($redirect_url),
+                'nonce' => wp_create_nonce('cancel_order_' . $order_id),
+            ),
+            home_url()
+        );
+
+        $actions['cancel'] = array(
+            'url'    => $cancel_url,
+            'name'   => __('Annuleren', 'your-textdomain'),
+            'action' => 'cancel',
+        );
+    }
+
+    return $actions;
+}
+add_filter('woocommerce_my_account_my_orders_actions', 'add_cancel_order_button_to_my_orders_actions', 10, 2);
+
+function handle_order_cancellation() {
+    if (isset($_GET['cancel_order']) && isset($_GET['order_id']) && isset($_GET['nonce'])) {
+        $order_id = absint($_GET['order_id']);
+
+        if (wp_verify_nonce($_GET['nonce'], 'cancel_order_' . $order_id)) {
+            $order = wc_get_order($order_id);
+
+            if ($order) {
+                if ($order->has_status('processing')) {
+                    $order->update_status('cancelled', __('Order was cancelled by customer.', 'your-textdomain'));
+                }
+            }
+
+            $redirect_url = wc_get_account_endpoint_url('dashboard');
+            wp_redirect($redirect_url);
+            exit;
+        }
+    }
+}
+add_action('template_redirect', 'handle_order_cancellation');
+
 
 // all session list for handle 
 // echo '

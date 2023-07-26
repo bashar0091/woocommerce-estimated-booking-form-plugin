@@ -29,8 +29,8 @@ function estimated_template_shortcode() {
                                     <div class="estimated_location_suggest">
                                         <div class="estimated_input_wrapper">
                                             <span class="estimated_input_icon">van</span>
-                                            <input type="text" name="estimated_by" class="estimated_location_map estimated_addresss" placeholder="straatnaam met huisnummer" required>
-                                            <input type="text" name="estimated_by_holding" class="estimated_holding" placeholder="Holding No.">
+                                            <input type="text" name="estimated_by" class="estimated_location_map estimated_addresss" placeholder="straatnaam met" required>
+                                            <input type="text" name="estimated_by_holding" class="estimated_holding" placeholder="House No..">
                                         </div>
                                         <div class="estimated_location_dropdown"></div>
                                     </div>
@@ -68,8 +68,8 @@ function estimated_template_shortcode() {
                                 <div class="estimated_location_suggest">
                                     <div class="estimated_input_wrapper">
                                         <span class="estimated_input_icon">naar</span>
-                                        <input type="text" name="estimated_reach" class="estimated_location_map estimated_addresss estimated_addresss_last" placeholder="straatnaam met huisnummer" required>
-                                        <input type="text" name="estimated_reach_holding" class="estimated_holding" placeholder="Holding No.">
+                                        <input type="text" name="estimated_reach" class="estimated_location_map estimated_addresss estimated_addresss_last" placeholder="straatnaam met" required>
+                                        <input type="text" name="estimated_reach_holding" class="estimated_holding" placeholder="House No..">
                                     </div>
                                     <div class="estimated_location_dropdown"></div>
                                 </div>
