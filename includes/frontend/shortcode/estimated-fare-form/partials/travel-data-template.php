@@ -56,7 +56,7 @@ $result .= '
         
         <div class="fare_details">    
             <div class="fare_details_info">
-                <a href="#!" class="fare_car location_edit">Edit</a>
+                <a href="#!" class="fare_car_edit location_edit">Edit</a>
                 
             <div class="popup_location">
                     <div class="estimated_input_loop">
@@ -113,8 +113,8 @@ $result .= '
                 </div>
 
                 <div> 
-                    <a href="#!" class="fare_car location_cancel">Close</a>
-                    <a href="#!" class="fare_car location_update">Update</a>
+                    <a href="#!" class="fare_car_edit location_cancel">Close</a>
+                    <a href="#!" class="fare_car_edit location_update">Update</a>
                 </div>
             </div>
 
@@ -150,7 +150,7 @@ $result .= '
 
                         <div class="estimated_input_with_pin estimated_input_with_pin_margin fare_pin_margin">
                             <span class="fare_time"></span>
-                            <div class="estimated_pin_wrapper estimated_input_add">
+                            <div class="estimated_pin_wrapper location_edit">
                                 <span class="estimated_pin estimated_pin_color estimated_plus fare_plus">
                                     <svg fill="#F76D27" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 455 455" xml:space="preserve">
                                     <polygon points="455,212.5 242.5,212.5 242.5,0 212.5,0 212.5,212.5 0,212.5 0,242.5 212.5,242.5 212.5,455 242.5,455 242.5,242.5 
@@ -158,7 +158,7 @@ $result .= '
                                     </svg>
                                 </span>
                             </div>
-                            <a href="#!" class="title_3 title_3_color">
+                            <a href="#!" class="title_3 title_3_color location_edit">
                                 tussenstop toevoegen
                             </a>
                         </div>

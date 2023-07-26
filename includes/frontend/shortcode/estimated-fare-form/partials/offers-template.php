@@ -9,24 +9,6 @@ $result .= '
             <div>
                 <h2 class="title_5">Aanbiedingen</h2>
             </div>
-            <div class="fare_d_flex_center">
-                <span class="title_6">Passagiers</span>
-                <div class="estimated_input_wrapper estimated_input_count estimated_input_count_border">
-                    <a href="#!" class="estimated_count_minus">
-                        <svg width="100%" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="1" height="1" fill="#000"/>
-                        <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                    <input type="number" name="estimated_ride_person" value="'.$estimated_ride_person.'" class="person_count person_count_get" min="1" max="8">
-                    <a href="#!" class="estimated_count_add">
-                        <svg fill="#000000" height="15px" width="100%" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 455 455" xml:space="preserve">
-                        <polygon points="455,212.5 242.5,212.5 242.5,0 212.5,0 212.5,212.5 0,212.5 0,242.5 212.5,242.5 212.5,455 242.5,455 242.5,242.5 
-                            455,242.5 "></polygon>
-                        </svg>
-                    </a>
-                </div>
-            </div>
         </div>
 
         <div class="car_list_fare_section">';
@@ -51,6 +33,9 @@ $result .= '
 
                     $main_price = $distance_result * $regular_price;
                     $sale_price = $distance_result * $sale_price;
+                    
+                    $main_price_integer = intval($main_price);
+                    $sale_price_integer = intval($sale_price);
                     
                     $product_id = $product->get_id();
 
@@ -96,8 +81,8 @@ $result .= '
                                 </ul>
                             </div>
                             <div class="car_fare_price_confirm">
-                                <h5>€ '.$main_price.'</h5>
-                                <h4>€ '.$sale_price.'</h4>
+                                <h5>€ '.$main_price_integer.'</h5>
+                                <h4>€ '.$sale_price_integer.'</h4>
                                 <button style="pointer-events: none" class="fare_button_submit">Selecteer</button>
                             </div>
                         </div>

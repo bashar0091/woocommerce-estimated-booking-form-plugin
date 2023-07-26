@@ -79,7 +79,7 @@ function estimated_template_shortcode() {
                                 
                                 <div>
                                     <p class="title_3 title_3_gap">Grote ruimbagage</p>
-                                    <div class="estimated_input_wrapper estimated_input_count">
+                                    <div class="estimated_input_wrapper estimated_input_count estimated_input_radius_fix">
                                         <a href="#!" class="estimated_count_minus">
                                             <svg width="100%" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <rect width="1" height="1" fill="#000"/>
@@ -98,7 +98,7 @@ function estimated_template_shortcode() {
 
                                 <div>
                                     <p class="title_3 title_3_gap">Kleine ruimbagage</p>
-                                    <div class="estimated_input_wrapper estimated_input_count">
+                                    <div class="estimated_input_wrapper estimated_input_count estimated_input_radius_fix">
                                         <a href="#!" class="estimated_count_minus">
                                             <svg width="100%" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <rect width="1" height="1" fill="#000"/>
@@ -128,7 +128,7 @@ function estimated_template_shortcode() {
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 11.161 2 10.4153 2.0129 9.75H21.9871C22 10.4153 22 11.161 22 12V14C22 17.7712 22 19.6569 20.8284 20.8284C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.8284C2 19.6569 2 17.7712 2 14V12ZM17 14C17.5523 14 18 13.5523 18 13C18 12.4477 17.5523 12 17 12C16.4477 12 16 12.4477 16 13C16 13.5523 16.4477 14 17 14ZM17 18C17.5523 18 18 17.5523 18 17C18 16.4477 17.5523 16 17 16C16.4477 16 16 16.4477 16 17C16 17.5523 16.4477 18 17 18ZM13 13C13 13.5523 12.5523 14 12 14C11.4477 14 11 13.5523 11 13C11 12.4477 11.4477 12 12 12C12.5523 12 13 12.4477 13 13ZM13 17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17C11 16.4477 11.4477 16 12 16C12.5523 16 13 16.4477 13 17ZM7 14C7.55228 14 8 13.5523 8 13C8 12.4477 7.55228 12 7 12C6.44772 12 6 12.4477 6 13C6 13.5523 6.44772 14 7 14ZM7 18C7.55228 18 8 17.5523 8 17C8 16.4477 7.55228 16 7 16C6.44772 16 6 16.4477 6 17C6 17.5523 6.44772 18 7 18Z" fill="#F76D27"/>
                                         </svg>
                                     </span>
-                                    <input type="text" class="estimated_calendar" name="estimated_current_date" placeholder="Selecteer datum en tijd" required>
+                                    <input type="text" class="estimated_calendar" name="estimated_current_date" placeholder="Selecteer datum en tijd" autocomplete="off" required>
                                 </div>
                             </div>
 
@@ -154,13 +154,13 @@ function estimated_template_shortcode() {
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 11.161 2 10.4153 2.0129 9.75H21.9871C22 10.4153 22 11.161 22 12V14C22 17.7712 22 19.6569 20.8284 20.8284C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.8284C2 19.6569 2 17.7712 2 14V12ZM17 14C17.5523 14 18 13.5523 18 13C18 12.4477 17.5523 12 17 12C16.4477 12 16 12.4477 16 13C16 13.5523 16.4477 14 17 14ZM17 18C17.5523 18 18 17.5523 18 17C18 16.4477 17.5523 16 17 16C16.4477 16 16 16.4477 16 17C16 17.5523 16.4477 18 17 18ZM13 13C13 13.5523 12.5523 14 12 14C11.4477 14 11 13.5523 11 13C11 12.4477 11.4477 12 12 12C12.5523 12 13 12.4477 13 13ZM13 17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17C11 16.4477 11.4477 16 12 16C12.5523 16 13 16.4477 13 17ZM7 14C7.55228 14 8 13.5523 8 13C8 12.4477 7.55228 12 7 12C6.44772 12 6 12.4477 6 13C6 13.5523 6.44772 14 7 14ZM7 18C7.55228 18 8 17.5523 8 17C8 16.4477 7.55228 16 7 16C6.44772 16 6 16.4477 6 17C6 17.5523 6.44772 18 7 18Z" fill="#F76D27"/>
                                         </svg>
                                     </span>
-                                    <input type="text" class="estimated_calendar" name="estimated_return_date" placeholder="Enkele reis">
+                                    <input type="text" class="estimated_calendar" name="estimated_return_date" placeholder="Enkele reis" autocomplete="off">
                                 </div>
                             </div>
 
                             <p class="title_3 title_3_gap">Aantal reizigers</p>
 
-                            <div class="estimated_input_wrapper estimated_input_count">
+                            <div class="estimated_input_wrapper estimated_input_count estimated_input_radius_fix">
                                 <a href="#!" class="estimated_count_minus">
                                     <svg width="100%" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect width="1" height="1" fill="#000"/>

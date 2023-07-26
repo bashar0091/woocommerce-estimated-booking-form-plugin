@@ -654,6 +654,7 @@
     box-shadow: 0 1px 3px #0000001f, 0 1px 2px #0000003d;
     border-radius: 0.625rem;
 }
+.fare_car_edit,
 .fare_car {
     background-color: var(--main_color);
     padding: 4px 11px;
@@ -804,6 +805,9 @@
 .location_update {
     background-color: #24cd85;
 }
+.estimated_input_radius_fix {
+    border-radius: 8px !important;
+}
 
 /* responsive  */
 @media (max-width: 767px) {
@@ -867,4 +871,23 @@
     .fare_header_tab ul li {
         display: inherit;
     }
+}
+
+
+
+
+
+.woocommerce-MyAccount-navigation-link--downloads,
+.woocommerce-MyAccount-navigation-link--edit-address,
+.woocommerce-additional-fields {
+	display: none !important;
+}
+.woocommerce-MyAccount-navigation ul li:hover a, .woocommerce-MyAccount-navigation ul li.is-active a {
+	background: #F7702B;
+}
+.button, .ct-button, .entry-tags a, .added_to_cart, [type="submit"], .wp-element-button, .wp-block-button__link, a.showlogin, a.restore-item, button.regform-button, button[class*="ajax"], .submit:where(:not(div.submit)), .forminator-ui[data-design="none"] .forminator-button {
+	position: relative;
+	color: var(--buttonTextInitialColor);
+	border: var(--button-border);
+	background-color: #F7702B !important;
 }

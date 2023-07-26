@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
     
     'use strict';
     $('.estimated_calendar').datetimepicker({
-
+        minute: true
     });
 
     $('.toogle_switch_outer').click(function(){
