@@ -29,7 +29,7 @@ function estimated_template_shortcode() {
                                     <div class="estimated_location_suggest">
                                         <div class="estimated_input_wrapper">
                                             <span class="estimated_input_icon">van</span>
-                                            <input type="text" name="estimated_by" class="estimated_location_map estimated_addresss" placeholder="straatnaam met" required>
+                                            <input type="text" name="estimated_by" class="estimated_location_map estimated_addresss" placeholder="straatnaam" required>
                                             <input type="text" name="estimated_by_holding" class="estimated_holding" placeholder="House No..">
                                         </div>
                                         <div class="estimated_location_dropdown"></div>
@@ -68,7 +68,7 @@ function estimated_template_shortcode() {
                                 <div class="estimated_location_suggest">
                                     <div class="estimated_input_wrapper">
                                         <span class="estimated_input_icon">naar</span>
-                                        <input type="text" name="estimated_reach" class="estimated_location_map estimated_addresss estimated_addresss_last" placeholder="straatnaam met" required>
+                                        <input type="text" name="estimated_reach" class="estimated_location_map estimated_addresss estimated_addresss_last" placeholder="straatnaam" required>
                                         <input type="text" name="estimated_reach_holding" class="estimated_holding" placeholder="House No..">
                                     </div>
                                     <div class="estimated_location_dropdown"></div>
@@ -78,7 +78,7 @@ function estimated_template_shortcode() {
                             <div class="estimated_input_radio_section">
                                 
                                 <div>
-                                    <p class="title_3 title_3_gap">Grote ruimbagage</p>
+                                    <p class="title_3 title_3_gap">Grote koffers</p>
                                     <div class="estimated_input_wrapper estimated_input_count estimated_input_radius_fix">
                                         <a href="#!" class="estimated_count_minus">
                                             <svg width="100%" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -97,7 +97,7 @@ function estimated_template_shortcode() {
                                 </div>
 
                                 <div>
-                                    <p class="title_3 title_3_gap">Kleine ruimbagage</p>
+                                    <p class="title_3 title_3_gap">Handbagages</p>
                                     <div class="estimated_input_wrapper estimated_input_count estimated_input_radius_fix">
                                         <a href="#!" class="estimated_count_minus">
                                             <svg width="100%" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

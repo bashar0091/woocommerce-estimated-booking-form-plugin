@@ -1,5 +1,8 @@
 <?php
 
+$big_luggage = $_SESSION['big_luggage'];
+$small_luggage = $_SESSION['small_luggage'];
+
 $estimated_ride_person = $_SESSION['estimated_ride_person'];
 $distance_result = $_SESSION['distance_result'];
 $result .= '
@@ -12,11 +15,40 @@ $result .= '
         </div>
 
         <div class="car_list_fare_section">';
+
+            $total_luggage = $big_luggage + $small_luggage;
+
+            $car_filter = '';
+
+            if($total_luggage > 8 && $total_luggage < 17) {
+                $car_filter = '8-luggage';
+            } elseif($total_luggage > 4 && $total_luggage < 9) {
+                $car_filter = '4-luggage';
+            } elseif($total_luggage > -1 && $total_luggage < 5) {
+                $car_filter = '2-luggage';
+            } elseif($estimated_ride_person > 4) {
+                $car_filter = '8-seat';
+            } elseif($estimated_ride_person > 0 && $estimated_ride_person < 5) {
+                $car_filter = '4-seat';
+            }
+            
+            // if($estimated_ride_person > 4) {
+            //     $car_filter = '8-seat';
+            // } else {
+            //     $car_filter = '4-seat';
+            // }
             $args = array(
                 'post_type'      => 'product',
                 'post_status'    => 'publish',
                 'posts_per_page' => 4,
-                'order'          => 'ASC'
+                'order'          => 'ASC',
+                'tax_query'      => array(
+                    array(
+                        'taxonomy' => 'product_cat',
+                        'field'    => 'slug',
+                        'terms'    => $car_filter,
+                    ),
+                ),
             );
             
             $products_query = new WP_Query( $args );

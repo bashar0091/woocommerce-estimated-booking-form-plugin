@@ -21,7 +21,7 @@ $result .= '
 <div id="travel_data" class="step-tab">
     <div class="fare_body_top_section">
         <div>
-            <h2 class="title_5">Reisgegevens</h2>
+            <h2 class="title_5">Retour</h2>
         </div>
     </div>
 
@@ -67,7 +67,7 @@ $result .= '
                             <div class="estimated_location_suggest">
                                 <div class="estimated_input_wrapper">
                                     <span class="estimated_input_icon">van</span>
-                                    <input type="text" name="estimated_by" value="'.$estimated_by.'" class="estimated_location_map estimated_addresss estimated_addresss_first" placeholder="straatnaam met" required="">
+                                    <input type="text" name="estimated_by" value="'.$estimated_by.'" class="estimated_location_map estimated_addresss estimated_addresss_first" placeholder="straatnaam" required="">
                                     <input type="text" name="estimated_by_holding" value="'.$estimated_by_holding.'" class="estimated_holding" placeholder="House No..">
                                 </div>
                             <div class="estimated_location_dropdown"></div>
@@ -105,7 +105,7 @@ $result .= '
                     <div class="estimated_location_suggest">
                         <div class="estimated_input_wrapper">
                             <span class="estimated_input_icon">naar</span>
-                            <input type="text" name="estimated_reach" value="'.$estimated_reach.'" class="estimated_location_map estimated_addresss estimated_addresss_last" placeholder="straatnaam met" required="">
+                            <input type="text" name="estimated_reach" value="'.$estimated_reach.'" class="estimated_location_map estimated_addresss estimated_addresss_last" placeholder="straatnaam" required="">
                             <input type="text" name="estimated_reach_holding" value="'.$estimated_reach_holding.'" class="estimated_holding" placeholder="House No..">
                         </div>
                         <div class="estimated_location_dropdown"></div>

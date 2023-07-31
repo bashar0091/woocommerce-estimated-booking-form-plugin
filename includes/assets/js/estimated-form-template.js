@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
                 <div class="estimated_location_suggest">
                     <div class="estimated_input_wrapper">
                         <span class="estimated_input_icon">via</span>
-                        <input type="text" name="estimated_middile_point[${number_count}]" class="estimated_location_map estimated_addresss" placeholder="Tussenstop straatnaam met" required>
+                        <input type="text" name="estimated_middile_point[${number_count}]" class="estimated_location_map estimated_addresss" placeholder="Tussenstop straatnaam" required>
                         <input type="text" name="estimated_middile_point_holding[${number_count}"] class="estimated_holding" placeholder="House No.." required>
                         <a href="#!" class="estimated_input_cross">
                             <svg width="100%" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -23,7 +23,7 @@ $result .= '
                 <svg width="100%" height="30px" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 14 14" id="svg2" fill="#6728A1"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata id="metadata8"> <rdf:rdf> <cc:work rdf:about=""> <dc:format>image/svg+xml</dc:format> <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type> <dc:title></dc:title> </cc:work> </rdf:rdf> </metadata> <defs id="defs6"></defs> <rect width="14" height="14" x="0" y="0" id="canvas" style="fill:none;stroke:none;visibility:hidden"></rect> <path d="M 6,1 C 5,1 4,2.0209735 4,3 l 0,1 -0.75,0 0,9 7.5,0 0,-9 L 10,4 10,3 C 10,2 8.9895132,1 8,1 z m 0.5,1.25 1,0 c 0.8599138,0 1.25,0.5994182 1.25,1.25 l 0,0.5 -3.5,0 0,-0.5 C 5.25,2.8707948 5.5557891,2.25 6.5,2.25 z M 2,4 C 0.64345039,4 0,4.6434504 0,6 l 0,5 c 0,1.35655 0.74831793,2 2,2 z m 10,0 0,9 c 1.251682,0 2,-0.748318 2,-2 L 14,6 C 14,4.6853974 13.377523,4 12,4 z" id="luggage" style="fill:#6728A1;fill-opacity:1;stroke:none"></path> </g></svg>
             </div>
             <div class="luggage_list_title">
-                <h5>Grote ruimbagage</h5>
+                <h5>Grote koffers</h5>
                 <span>85cm x 55cm x 35cm</span>
             </div>
             <div class="luggage_list_number">
@@ -48,7 +48,7 @@ $result .= '
                 <svg fill="#6728A1" height="30px" width="100%" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M495.304,101.658H351.196V60.224c0-9.22-7.475-16.696-16.696-16.696H177.499c-9.22,0-16.696,7.475-16.696,16.696v41.433 H16.696C7.48,101.657,0,109.137,0,118.353v138.574h197.754v-21.871c0-9.216,7.48-16.696,16.696-16.696h83.1 c9.216,0,16.696,7.48,16.696,16.696v21.871H512V118.353C512,109.137,504.52,101.658,495.304,101.658z M317.806,101.657H194.195 V76.92h123.611V101.657z"></path> <path d="M314.246,297.43c0,32.111-26.134,58.234-58.246,58.234c-32.111,0-58.246-26.123-58.246-58.234v-7.112H17.018v161.458 c0,9.216,7.48,16.696,16.696,16.696h444.572c9.216,0,16.696-7.48,16.696-16.696V290.318H314.246V297.43z"></path> </g> </g> </g> </g></svg>
             </div>
             <div class="luggage_list_title">
-                <h5>Kleine ruimbagage</h5>
+                <h5>Handbagages</h5>
                 <span>55cm x 45cm x 25cm</span>
             </div>
             <div class="luggage_list_number">
@@ -100,7 +100,7 @@ $result .= '
                 <svg width="100%" height="30px" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 14 14" id="svg2" fill="#6728A1"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <metadata id="metadata8"> <rdf:rdf> <cc:work rdf:about=""> <dc:format>image/svg+xml</dc:format> <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type> <dc:title></dc:title> </cc:work> </rdf:rdf> </metadata> <defs id="defs6"></defs> <rect width="14" height="14" x="0" y="0" id="canvas" style="fill:none;stroke:none;visibility:hidden"></rect> <path d="M 6,1 C 5,1 4,2.0209735 4,3 l 0,1 -0.75,0 0,9 7.5,0 0,-9 L 10,4 10,3 C 10,2 8.9895132,1 8,1 z m 0.5,1.25 1,0 c 0.8599138,0 1.25,0.5994182 1.25,1.25 l 0,0.5 -3.5,0 0,-0.5 C 5.25,2.8707948 5.5557891,2.25 6.5,2.25 z M 2,4 C 0.64345039,4 0,4.6434504 0,6 l 0,5 c 0,1.35655 0.74831793,2 2,2 z m 10,0 0,9 c 1.251682,0 2,-0.748318 2,-2 L 14,6 C 14,4.6853974 13.377523,4 12,4 z" id="luggage" style="fill:#6728A1;fill-opacity:1;stroke:none"></path> </g></svg>
             </div>
             <div class="luggage_list_title">
-                <h5>Grote ruimbagage</h5>
+                <h5>Grote koffers</h5>
             </div>
             <div class="luggage_list_number">
                 <a href="#!" class="luggage_count_minus">
@@ -124,7 +124,7 @@ $result .= '
                 <svg fill="#6728A1" height="30px" width="100%" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M495.304,101.658H351.196V60.224c0-9.22-7.475-16.696-16.696-16.696H177.499c-9.22,0-16.696,7.475-16.696,16.696v41.433 H16.696C7.48,101.657,0,109.137,0,118.353v138.574h197.754v-21.871c0-9.216,7.48-16.696,16.696-16.696h83.1 c9.216,0,16.696,7.48,16.696,16.696v21.871H512V118.353C512,109.137,504.52,101.658,495.304,101.658z M317.806,101.657H194.195 V76.92h123.611V101.657z"></path> <path d="M314.246,297.43c0,32.111-26.134,58.234-58.246,58.234c-32.111,0-58.246-26.123-58.246-58.234v-7.112H17.018v161.458 c0,9.216,7.48,16.696,16.696,16.696h444.572c9.216,0,16.696-7.48,16.696-16.696V290.318H314.246V297.43z"></path> </g> </g> </g> </g></svg>
             </div>
             <div class="luggage_list_title">
-                <h5>Kleine ruimbagage</h5>
+                <h5>Handbagages</h5>
             </div>
             <div class="luggage_list_number">
                 <a href="#!" class="luggage_count_minus">

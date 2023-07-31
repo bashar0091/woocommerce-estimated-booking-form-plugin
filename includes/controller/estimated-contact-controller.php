@@ -78,13 +78,13 @@ add_action('woocommerce_before_calculate_totals', 'update_cart_item_price', 10, 
 function display_custom_product_field_on_cart($cart_item_data, $cart_item) {
     if (isset($cart_item['estimated_by'])) {
         $cart_item_data[] = array(
-            'name' => 'Estimated By',
+            'name' => 'Vertrek Locatie',
             'value' => $cart_item['estimated_by'],
         );
     }
     if (isset($cart_item['estimated_to'])) {
         $cart_item_data[] = array(
-            'name' => 'Estimated To',
+            'name' => 'Bestemming',
             'value' => $cart_item['estimated_to'],
         );
     }
@@ -108,10 +108,10 @@ add_filter('woocommerce_get_item_data', 'display_custom_product_field_on_cart', 
 // update custom field 
 function display_custom_product_field_on_checkout($item, $cart_item_key, $values, $order) {
     if (isset($values['estimated_by'])) {
-        $item->add_meta_data('Estimated By', $values['estimated_by'], true);
+        $item->add_meta_data('Vertrek Locatie', $values['estimated_by'], true);
     }
     if (isset($values['estimated_to'])) {
-        $item->add_meta_data('Estimated To', $values['estimated_to'], true);
+        $item->add_meta_data('Bestemming', $values['estimated_to'], true);
     }
     if (isset($values['passengar'])) {
         $item->add_meta_data('Passengar', $values['passengar'], true);
