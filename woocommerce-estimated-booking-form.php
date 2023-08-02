@@ -123,6 +123,36 @@ function handle_order_cancellation() {
 add_action('template_redirect', 'handle_order_cancellation');
 
 
+// woocommerce remove quantity 
+function remove_checkout_quantity_field( $cart_item, $cart_item_key ) {
+    return false;
+}
+add_filter( 'woocommerce_checkout_cart_item_quantity', 'remove_checkout_quantity_field', 10, 2 );
+
+function remove_order_quantity_field( $show_quantity, $product ) {
+    return false;
+}
+add_filter( 'woocommerce_checkout_cart_item_quantity', 'remove_order_quantity_field', 10, 2 );
+
+function remove_checkout_order_quantity_input_fields( $html, $cart_item, $cart_item_key ) {
+    return $html;
+}
+add_filter( 'woocommerce_checkout_cart_item_quantity', 'remove_checkout_order_quantity_input_fields', 10, 3 );
+
+
+// session close 
+function session_close($order_id) {
+    $order = wc_get_order($order_id);
+
+    if (!$order || !in_array($order->get_status(), ['processing', 'completed'])) {
+        return;
+    }
+
+    session_unset();
+}
+add_action('woocommerce_thankyou', 'session_close', 10, 1);
+
+
 // all session list for handle 
 // echo '
 // <h2>Session Data</h2>

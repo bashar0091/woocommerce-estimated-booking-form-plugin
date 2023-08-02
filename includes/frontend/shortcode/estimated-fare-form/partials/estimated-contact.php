@@ -4,6 +4,18 @@ $car_id = isset($_SESSION['car_id']) ? $_SESSION['car_id'] : '';
 $car_price = isset($_SESSION['car_price']) ? $_SESSION['car_price'] : '';
 $estimated_ride_person = isset($_SESSION['estimated_ride_person']) ? $_SESSION['estimated_ride_person'] : '';
 
+$estimated_return_confirm = isset($_SESSION['estimated_return_confirm']) ? $_SESSION['estimated_return_confirm'] : '';
+
+$current_user = wp_get_current_user();
+$current_user_id = $current_user->ID;
+
+$first_name = $current_user->first_name;
+$last_name = $current_user->last_name;
+
+$phone_number = get_user_meta($current_user_id, 'billing_phone', true);
+$email = get_user_meta($current_user_id, 'billing_email', true);
+
+
 $result .= '
 <div id="contact_details" class="step-tab">
     <form action="" method="post">
@@ -11,6 +23,8 @@ $result .= '
         <input type="hidden" id="checkout_car_id" name="checkout_car_id" value="'.$car_id.'">
         <input type="hidden" id="checkout_car_price" name="checkout_car_price" value="'.$car_price.'">
         <input type="hidden" id="checkout_car_person" name="checkout_car_person" value="'.$estimated_ride_person.'">
+        
+        <input type="hidden" id="checkout_return_yes" name="checkout_return_yes" value="'.$estimated_return_confirm.'">
 
         <div class="fare_body_top_section">
             <div>
@@ -26,13 +40,13 @@ $result .= '
                         <div>
                             <p class="title_8">Voornaam</p>
                             <div class="estimated_input_wrapper estimated_input_wrapper_border">
-                                <input type="text" class="" value="" name="user_first_name" placeholder="Voornaam" required="">
+                                <input type="text" class="" value="'.($first_name ? $first_name : '').'" name="user_first_name" placeholder="Voornaam" required="">
                             </div>
                         </div>
                         <div>
                             <p class="title_8">Achternaam</p>
                             <div class="estimated_input_wrapper estimated_input_wrapper_border">
-                                <input type="text" class="" value="" name="user_last_name" placeholder="Achternaam" required="">
+                                <input type="text" class="" value="'.($last_name ? $last_name : '').'" name="user_last_name" placeholder="Achternaam" required="">
                             </div>
                         </div>
                     </div>
@@ -41,7 +55,7 @@ $result .= '
                         <div>
                             <p class="title_8">E-mailadres</p>
                             <div class="estimated_input_wrapper estimated_input_wrapper_border">
-                                <input type="email" class="" value="" name="user_email_add" placeholder="E-mailadres" required="">
+                                <input type="email" class="" value="'.($email ? $email : '').'" name="user_email_add" placeholder="E-mailadres" required="">
                             </div>
                         </div>
                     </div>
@@ -50,7 +64,7 @@ $result .= '
                 <div class="fare_comment">
                     <p class="title_8">Telefoonnummer</p>
                     <div class="estimated_input_wrapper estimated_input_wrapper_border">
-                        <input type="tel" class="" value="" name="user_telephone" placeholder="Telefoonnummer" required="">
+                        <input type="tel" class="" value="'.$phone_number.'" name="user_telephone" placeholder="Telefoonnummer" required="">
                     </div>
                 </div>
             </div>

@@ -133,7 +133,7 @@ $result .= '
                     </div>
 
                     <div class="estimated_body_left">
-                        <div class="estimated_input_loop">
+                        <div class="">
                             <div class="fare_timeline estimated_input_with_pin">
                                 <div class="estimated_pin_wrapper">
                                     <span class="fare_time">
@@ -190,6 +190,11 @@ $result .= '
             </div>
 
             <div class="fare_comment">
+                <p class="title_8">Vluchtnummer <span>optioneel</span></p>
+                <div class="estimated_input_wrapper estimated_input_wrapper_border">
+                    <input type="text" class="estimated_calendar" value="" name="flight_number">
+                </div>
+    
                 <p class="title_8">Opmerking(en) <span>optioneel</span></p>
                 <textarea>
 
@@ -236,7 +241,7 @@ $result .= '
                     </div>
 
                     <div class="estimated_body_left">
-                        <div class="estimated_input_loop">
+                        <div class="">
                             <div class="fare_timeline estimated_input_with_pin">
                                 <div class="estimated_pin_wrapper">
                                     <span class="fare_time">
@@ -293,6 +298,11 @@ $result .= '
             </div>
 
             <div class="fare_comment">
+                <p class="title_8">Vluchtnummer <span>optioneel</span></p>
+                <div class="estimated_input_wrapper estimated_input_wrapper_border">
+                    <input type="text" class="estimated_calendar" value="" name="flight_number">
+                </div>
+                
                 <p class="title_8">Opmerking(en) <span>optioneel</span></p>
                 <textarea>
 

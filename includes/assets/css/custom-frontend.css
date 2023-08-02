@@ -467,7 +467,7 @@
     position: fixed;
     width: 100%;
     display: none;
-    z-index: 999;
+    z-index: 99999;
     top: 0;
 }
 .progress-bar span {
@@ -876,7 +876,15 @@
 
 
 
-
+.popular_location_click .elementor-post__title {
+    pointer-events: none;
+}
+.popular_location_click .elementor-post__card {
+    cursor: pointer;
+}
+.popular_location_click .elementor-post__excerpt {
+	display: none;
+}
 .woocommerce-MyAccount-navigation-link--downloads,
 .woocommerce-MyAccount-navigation-link--edit-address,
 .woocommerce-additional-fields {
