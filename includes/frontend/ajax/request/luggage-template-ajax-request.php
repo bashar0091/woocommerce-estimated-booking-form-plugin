@@ -21,12 +21,12 @@
                 hand_luggage_count : hand_luggage_count
             },
             beforeSend: function() {
-                $('.progress-bar').addClass('active');
-                $('.progress-bar.active .progress').css('animation' , `loader 5s ease infinite`);
+                $('.progress_bar').addClass('active');
+                $('.progress_bar.active .progress').css('animation' , `loader 5s ease infinite`);
             },
             success: function(response) {
                 
-                $('.progress-bar').removeClass('active');
+                $('.progress_bar').removeClass('active');
                 $('#luggage').removeClass('show');
                 $('#offers').addClass('show allow');
             },

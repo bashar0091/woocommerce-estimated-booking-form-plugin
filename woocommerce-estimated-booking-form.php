@@ -152,6 +152,15 @@ function session_close($order_id) {
 }
 add_action('woocommerce_thankyou', 'session_close', 10, 1);
 
+// checkout text change 
+add_filter('woocommerce_gateway_title', 'change_cod_payment_title', 10, 2);
+function change_cod_payment_title($title, $payment_id) {
+    if ($payment_id === 'cod') {
+        $title = 'Contant';
+    }
+    return $title;
+}
+
 
 // all session list for handle 
 // echo '

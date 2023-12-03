@@ -10,12 +10,12 @@
                 action: 'offers_template_action',
             },
             beforeSend: function() {
-                $('.progress-bar').addClass('active');
-                $('.progress-bar.active .progress').css('animation' , `loader 5s ease infinite`);
+                $('.progress_bar').addClass('active');
+                $('.progress_bar.active .progress').css('animation' , `loader 5s ease infinite`);
             },
             success: function(response) {
                 
-                $('.progress-bar').removeClass('active');
+                $('.progress_bar').removeClass('active');
                 $('.estimated_info').removeClass('active');
                 $('.estimated_contact').addClass('allow active');
 

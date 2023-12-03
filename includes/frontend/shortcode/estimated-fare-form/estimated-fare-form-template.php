@@ -12,9 +12,9 @@ session_start();
     $result = '';
 
     $result .= '
-    <div class="progress-bar">
-        <span class="bar">
-            <span class="progress"></span>
+    <div class="progress_bare">
+        <span class="bare">
+            <span class="progressede"></span>
         </span>
     </div>
 

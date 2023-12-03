@@ -1,13 +1,12 @@
 <?php
-
-$estimated_current_date = $_SESSION['estimated_current_date'];
+$estimated_current_date = date('d-n-Y | H:i', strtotime( $_SESSION['estimated_current_date']));
 $estimated_by = $_SESSION['estimated_by'];
-$estimated_by_holding = $_SESSION['estimated_by_holding'];
+$estimated_by_holding = isset($_SESSION['estimated_by_holding'])?$_SESSION['estimated_by_holding']:null;
 
 $estimated_reach = $_SESSION['estimated_reach'];
-$estimated_reach_holding = $_SESSION['estimated_reach_holding'];
+$estimated_reach_holding = isset($_SESSION['estimated_reach_holding'])?$_SESSION['estimated_reach_holding']:null;
 
-$estimated_return_date = $_SESSION['estimated_return_date'];
+$estimated_return_date = date('d-n-Y | H:i', strtotime( $_SESSION['estimated_return_date']));
 
 $car_price = isset($_SESSION['car_price']) ? $_SESSION['car_price'] : '' ;
 $car_name = isset($_SESSION['car_name']) ? $_SESSION['car_name'] : '';
@@ -37,7 +36,7 @@ $result .= '
         <div class="travel_data_top">
             <div>
                 <div>
-                    <h4 class="title_7">Reis</h4>
+                    <h4 class="title_7">Ritprijs</h4>
                 </div>
                 <div>
                     <span class="fare_price">€ <span class="fare_price_show">'.$car_price.'</span></span>
@@ -192,7 +191,7 @@ $result .= '
             <div class="fare_comment">
                 <p class="title_8">Vluchtnummer <span>optioneel</span></p>
                 <div class="estimated_input_wrapper estimated_input_wrapper_border">
-                    <input type="text" class="estimated_calendar" value="" name="flight_number">
+                    <input type="text" class="flight_number" value="" name="flight_number">
                 </div>
     
                 <p class="title_8">Opmerking(en) <span>optioneel</span></p>
@@ -207,7 +206,7 @@ $result .= '
         <div class="travel_data_top">
             <div>
                 <div>
-                    <h4 class="title_7">Reis</h4>
+                    <h4 class="title_7">Ritprijs</h4>
                 </div>
                 <div>
                     <span class="fare_price">€ <span class="fare_price_show">'.$car_price.'</span></span>
@@ -300,7 +299,7 @@ $result .= '
             <div class="fare_comment">
                 <p class="title_8">Vluchtnummer <span>optioneel</span></p>
                 <div class="estimated_input_wrapper estimated_input_wrapper_border">
-                    <input type="text" class="estimated_calendar" value="" name="flight_number">
+                    <input type="text" class="flight_number" value="" name="flight_number">
                 </div>
                 
                 <p class="title_8">Opmerking(en) <span>optioneel</span></p>
@@ -313,7 +312,7 @@ $result .= '
 
     <div class="fare_body_footer_section">
         <div>
-            <a href="/" class="back_arrow">
+            <a href="/boek" class="back_arrow">
                 <svg width="20px" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5303 5.46967C10.8232 5.76256 10.8232 6.23744 10.5303 6.53033L5.81066 11.25H20C20.4142 11.25 20.75 11.5858 20.75 12C20.75 12.4142 20.4142 12.75 20 12.75H5.81066L10.5303 17.4697C10.8232 17.7626 10.8232 18.2374 10.5303 18.5303C10.2374 18.8232 9.76256 18.8232 9.46967 18.5303L3.46967 12.5303C3.17678 12.2374 3.17678 11.7626 3.46967 11.4697L9.46967 5.46967C9.76256 5.17678 10.2374 5.17678 10.5303 5.46967Z" fill="#F76D27"></path> </g></svg>
                 terug
             </a>
